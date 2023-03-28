@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Project</title>
+    <style>
+        .centre{
+            margin-left: auto;
+            margin-right: auto;
+           display: block;
+        }
+        .img{
+            height:450px;
+        }
+        .btn{
+          width: 100px;
+          height: 50px;
+          background-color: green;
+          border-radius: 3px;
+          font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+    <img id='bulb' src="img/bulb_off.png" alt="bulb_off"  class="img centre">
+    <button id="toggle-btn" class="btn centre">TURN ON</button>
+
+    <script>
+        let btn=document.getElementById('toggle-btn')
+        let bulb=document.getElementById('bulb')
+        btn.addEventListener('click',toggleBulb)
+
+
+        function toggleBulb(e){
+           if(btn.textContent.includes('ON')){
+            bulb.src="img/bulb_on.png";
+           
+            btn.textContent="TURN OFF"
+        }
+        else{
+            bulb.src="img/bulb_off.png";
+        btn.textContent="TURN ON"
+        }
+    }
+    </script>
+</body>
+</html>
